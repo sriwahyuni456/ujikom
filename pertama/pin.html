@@ -14,15 +14,26 @@
     </div>
     
     <div class="text-white font-bold text-2xl text-center mt-52">
-        <h1 class="">MASUKAN PIN</h1>
-        <form action="" onsubmit="" class="mt-20">
-            <input type="password" id="pin" required name="pin" value="" class="text-black">
-            <input type="submit" class="" value="ENTER">
-        </form>
-        <h1 class="py-24">TEKAN 'ENTER' JIKA SELESAI<br>MASUKAN PIN</h1>
+            <h1 class="">MASUKAN PIN</h1>
+            <form action="" onsubmit="pin()">
+                <input type="password" id="NoPin" value="" required class="text-black">
+                <input type="submit" class="" value="ENTER">
+            </form>
+            <h1 class="py-24">TEKAN 'ENTER' JIKA SELESAI<br>MASUKAN PIN</h1>
     </div>
 </div>
-
-
 </body>
+
+<script>
+    function pin() {
+        let pin = document.getElementById("NoPin").value;
+        console.info(pin);
+        if (pin == '123456') {
+            window.open('tunai.html','_blank');
+            window.close();
+        } else {
+            alert ('pin yang anda masukan salah')
+        }
+    };
+</script>
 </html>

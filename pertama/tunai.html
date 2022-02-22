@@ -8,20 +8,91 @@
     <title>Document</title>
 </head>
 <body class="bg-blue-800">
-    <div class="text-center text-white text-3xl mt-12">
-    <h1>PILIH PAKET TUNAI</h1>
-    <P class="text-left ml-96 mt-12"><- 100.000</P>   
-    <P class="text-left ml-96 mt-12"><- 200.000</P>
-    <P class="text-left ml-96 mt-12"><- 300.000</P>
-    <P class="text-left ml-96 mt-12"><- 500.000</P>    
-    </div>
 
-    <div class="text-center text-white text-3xl mt-12 text-right">
+    <div class="text-center text-3xl text-white mt-12">
         <h1>PILIH PAKET TUNAI</h1>
-        <P class="text-left ml-96 mt-12">1.000.000-></P>   
-        <P class="text-left ml-96 mt-12">1.500.000-></P>
-        <P class="text-left ml-96 mt-12">2.000.000-></P>
-        <P class="text-left ml-96 mt-12">TRANSSAKSI<BR>LAINNYA-></P>    
-        </div>
+    </div>
+   
+
+    <div class="flex">
+        <div class="text-left text-white text-3xl mt-12 ml-96 space-y-20 grid w1/2">
+                <button onclick="seRatus()"><-100.000</button>  
+                <button onclick="duaRatus()"><-200.000</button>
+                <button onclick="tigaRatus()"><-300.000</button>
+                <button onclick="limaRatus()"><-500.000</button>
+            </div>
+        
+            <div class="text-white text-3xl mt-12 ml-96 text-left space-y-20 grid w-1/2">
+                    <button onclicks="satuJuta()">1.000.000-></button>   
+                    <button onclick="satuSetengah()">1.500.000-></button>
+                    <button onclick="duaJuta">2.000.000-></button>
+                    <button> <a href="transaksi.html">TRANSSAKSI<BR>LAINNYA-> </a> </button>  
+                </div>
+
+    </div>
+    
 </body>
+<script>
+    let uiambil = 'ambil.html';
+    let saldo = 5000000;
+    let paket = {
+      seratus: '100000',
+      duaratus: '200000',
+      tigaratus: '300000',
+      limaratus: '500000',
+      satujuta: '1000000',
+      satusetengah: '1500000',
+      duajuta: '2000000',
+    };
+
+    function seRatus() {
+      let saldoakhir = saldo - paket.seratus;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+    function duaRatus() {
+      let saldoakhir = saldo - paket.duaratus;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+    function tigaRatus() {
+      let saldoakhir = saldo - paket.tigaratus;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+    function limaRatus() {
+      let saldoakhir = saldo - paket.limaratus;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+    function satuJuta() {
+      let saldoakhir = saldo - paket.satujuta;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+    function satuSetengah() {
+      let saldoakhir = saldo - paket.satusetengah;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+    function duaJuta() {
+      let saldoakhir = saldo - paket.duajuta;
+      confirm(`sisa saldo anda ${saldoakhir}`)
+      window.open(uiambil, 'blank');
+      window.close();
+    }
+
+  </script>
 </html>
